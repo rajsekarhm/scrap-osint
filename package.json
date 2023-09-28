@@ -3,13 +3,19 @@
   "version": "0.0.0",
   "description": "why me man",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "runner": "./bin/cli.js"
   },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.38.1",
     "@types/node": "^20.7.0"
-  }
+  },
+  "dependencies": {
+    "inquirer": "^9.2.11",
+    "kafkajs": "^2.2.4"
+  },
+  "type": "module"
 }
