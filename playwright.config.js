@@ -13,7 +13,7 @@ const { cpus } = require('os');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  testMatch: '*.test.js',
+  testMatch: '*.scrap.js',
   testDir: './scrap-test',
   /* Run tests in files in parallel */
   fullyParallel: true,
