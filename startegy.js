@@ -11,3 +11,18 @@
  *  Creepy: A geolocation information gathering tool using social networking platforms.
  *  Osintgram: A tool for collecting data from Instagram, including user profiles and posts.
  */
+
+
+/**    Tooll Tooked 
+ *    google dorking ==> site: inurl: intext: intitle filetype 
+ *            ==>  operter OR
+ *    shodan ==> has_screenshot
+ * 
+ *    checkusername.com
+ * 
+ *    social.search.com
+ * 
+ *    thatsthem.com
+ * 
+ * 
+ */ 
