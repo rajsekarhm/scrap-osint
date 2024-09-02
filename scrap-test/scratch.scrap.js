@@ -1,10 +1,5 @@
-const { test } = require('@playwright/test')
-let context, page;
-test.beforeAll(async ({ browser }) => {
-    context = await browser.newContext()
-    page = await context.newPage()
-})
+import { test } from "@playwright/test";
+test("scrap-data", async ({ page }) => {
+  console.log(page);
+});
 
-test.describe('scrap-data', () => {
-
-})
