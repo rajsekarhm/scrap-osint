@@ -1,7 +1,6 @@
 // @ts-check
-const { defineConfig, devices } = require('@playwright/test');
-const { cpus } = require('os');
-
+import { defineConfig, devices } from "@playwright/test";
+import { cpus } from "os";
 
 /**
  * Read environment variables from file.
@@ -12,9 +11,9 @@ const { cpus } = require('os');
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
-module.exports = defineConfig({
-  testMatch: '*.scrap.js',
-  testDir: './scrap-test',
+export default defineConfig({
+  testMatch: "*.scrap.js",
+  testDir: "./scrap-test",
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -24,22 +23,22 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : cpus().length,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'null',
+  reporter: "null",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: "on-first-retry",
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    }
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
+    },
 
     // {
     //   name: 'firefox',
@@ -79,4 +78,3 @@ module.exports = defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-
